@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../css/layui.css" />
+		
+		<script src="../js/index.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../js/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/nomove.js" type="text/javascript" charset="utf-8"></script>
+		<title>走势图</title>
+	</head>
+	<style>
+		html,
+		body {
+			overflow: hidden;
+			height: 100%;
+			background-color: #001638;
+		}
+		/*禁止复制*/
+		
+		.no-touch {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		
+		div {
+			position: absolute;
+			right: 0rem;
+			left: 0rem;
+			height: 12rem;
+			background-image: url(../img/yongbg.png);
+			background-size: 100% 100%;
+		}
+		
+		#imgs li {
+			margin-top: 0.15rem;
+			height: 0.9rem;
+			margin-left: 0.6rem;
+			border-bottom: 0.001rem solid #000000;
+			width: 90%;
+		}
+		
+		#imgs>li img {
+			position: absolute;
+			left: 1.2rem;
+			margin-top: 0rem;
+			width: 0.8rem;
+			height: 0.8rem;
+		}
+		
+		#imgs>li label {
+			position: absolute;
+			margin-top: 0rem;
+			right: 1.7rem;
+			font-size: 0.46rem;
+			color: #D0CB86;
+			text-align: center;
+		}
+	</style>
+
+	<body class="no-touch">
+		<div>
+			<ol id="imgs">
+				<li></li>
+				<li>
+					<img src="../img/help/laohu.png" alt="" />
+					<label>13倍</label>
+				</li>
+				<li>
+					<img src="../img/help/yanzi.png" alt="" />
+					<label>6倍</label>
+				</li>
+				<li>
+					<img src="../img/help/shark.png" alt="" />
+					<label>24倍</label>
+				</li>
+				<li>
+					<img src="../img/help/laoy.png" alt="" />
+					<label>8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/gezi.png" alt="" />
+					<label>8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/kongque.png" alt="" />
+					<label>8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/houzi.png" alt="" />
+					<label>8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/panda.png" alt="" />
+					<label for="">8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/houzi.png" alt="" />
+					<label>8倍</label>
+				</li>
+				<li>
+					<img src="../img/help/shark.png" alt="" />
+					<label>24倍</label>
+				</li>
+			</ol>
+
+		</div>
+
+	</body>
+
+</html>

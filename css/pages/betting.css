@@ -1,0 +1,30 @@
+
+/*投注记录区*/
+#betrecord{
+	position: relative;
+	top: 0.95rem;
+	height: 13.2rem;
+	left: 0rem;
+	right: 0rem;
+	width: 100%;
+	background-image: url(../../img/betrecord.png);
+	background-size: 100% 100%;
+}
+#betrecord>span{
+	position: absolute;
+	left: 4.15rem;
+	top: 0.87rem;
+	font-size: 0.38rem;
+	color: #4D84C8;
+}
+#betrecord>table{
+	position: absolute;
+	top: 1.53rem;
+	left: 1.1rem;
+	width: 80%;
+	right: 1.1rem;
+	font-size: 0.34rem;
+	color: #C6C487;
+	text-align: center;
+}
+

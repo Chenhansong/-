@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/pages/game.css" type="text/css" />
+		<link rel="stylesheet" href="css/pages/betting.css" />
+		<link rel="stylesheet" type="text/css" href="css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer.css" />
+		<script type="text/javascript" src="js/index.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/layer.js"></script>
+		
+		<script src="js/nomove.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tabmove.js" type="text/javascript" charset="utf-8"></script>
+		<title>投注记录</title>
+	</head>
+
+	<body class="no-touch">
+
+		<div class="container-fluid">
+			<!--公告信息-->
+			<div id="note">
+				<img src="img/gonggao.png" alt="" /> &nbsp;
+				<span>4月2日 12.32 亲爱的XXX祝你游戏愉快</span>
+			</div>
+
+			<!--用户信息-->
+			<div id="header">
+				<div>
+					<div id="user--head">
+						<img src="img/head.jpg" alt="" />
+					</div>
+					<div id="user--info">
+						<span id="user--id">飞禽走兽</span>
+						<img src="img/yue.png" />
+						<span id="user--money">3322万</span>
+					</div>
+				</div>
+				<div>
+					<div id="duihuan">
+						<img src="img/duihuan.png" alt="" />
+					</div>
+					<div id="chongzhi">
+						<img src="img/chongzhi.png" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div id="betrecord">
+				<span>投注记录</span>
+				<table>
+					<thead>
+						<tr valign="middle">
+							<th width="15%">期号</th>
+							<th width="35%">下注金额(元)</th>
+							<th width="35%">中奖金额(元)</th>
+							<th width="15%">状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>20180101</td>
+							<td>4545</td>
+							<td>1231</td>
+							<td>未中奖</td>
+						</tr>
+						<tr>
+							<td>20180101</td>
+							<td>4545</td>
+							<td>1231</td>
+							<td>中奖</td>
+						</tr>
+						<tr>
+							<td>20180101</td>
+							<td>4545</td>
+							<td>1231</td>
+							<td>中奖</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!--主页 记录等区域-->
+			<div id="tab">
+				<img src="icons/home.png" alt="" id="hometab"/>
+				<img src="icons/betting.png" alt="" id="bettingtab"/>
+				<img src="icons/yong.png" alt="" id="yongtab"/>
+				<img src="icons/proxy.png" alt="" id="proxytab"/>
+				<img src="icons/server.png" alt="" id="servertab"/>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function(){
+			var home = document.getElementById("hometab");
+			home.src="icons/home.png";
+			
+			var bettab = document.getElementById("bettingtab");
+			bettab.src ="icons/betted.png";
+		})
+	})(jQuery)
+</script>

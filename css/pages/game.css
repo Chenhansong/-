@@ -1,0 +1,731 @@
+html,
+body {
+	overflow: hidden;
+	height: 100%;
+	background-color: #001638;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*禁止长按选中文本*/
+
+.no-touch {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+/*公告*/
+
+#note>img {
+	width: 0.35rem;
+	height: 0.35rem;
+}
+
+#note {
+	position: relative;
+	top: 0.1rem;
+	left: 1.6rem;
+	width: 7.5rem;
+	height: 0.4rem;
+	background-image: url(../../img/gonggao2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.3rem;
+	color: #2DADD7;
+}
+
+
+/*用户信息*/
+
+#header {
+	position: relative;
+	height: 0rem;
+	width: 100%;
+	left: 0;
+	top: 0rem;
+}
+
+
+/*用户头像框*/
+
+#user--head {
+	position: absolute;
+	background-image: url(../../img/headk.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 0rem;
+	width: 3.3rem;
+	height: 1.24rem;
+	left: 0.1rem;
+}
+
+
+/*用户头像*/
+
+#user--head>img {
+	position: absolute;
+	height: 1rem;
+	width: 1rem;
+	top: 0.11rem;
+	left: 0.13rem;
+	border-radius: 50%;
+}
+
+
+/*用户ID*/
+
+#user--info>#user--id {
+	position: absolute;
+	top: 0.1rem;
+	left: 1.4rem;
+	font-size: 0.3rem;
+	color: white;
+}
+
+
+/*金币图标*/
+
+#user--info>img {
+	position: absolute;
+	top: 0.7rem;
+	left: 1.4rem;
+	width: 0.4rem;
+	height: 0.4rem;
+}
+
+
+/*用户余额*/
+
+#user--info>#user--money {
+	position: absolute;
+	top: 0.7rem;
+	left: 1.9rem;
+	overflow-y: hidden;
+	font-size: 0.3rem;
+	color: #D9D919;
+}
+
+
+/*兑换图标*/
+
+#duihuan>img {
+	position: absolute;
+	width: 0.85rem;
+	height: 0.85rem;
+	right: 1.7rem;
+	top: 0.45rem;
+}
+
+
+/*充值图标*/
+
+#chongzhi>img {
+	position: absolute;
+	width: 0.85rem;
+	height: 0.85rem;
+	right: 0.37rem;
+	top: 0.45rem;
+}
+
+
+/*游戏中心*/
+
+#gamer {
+	position: relative;
+	top: 0.95rem;
+	height: 7.88rem;
+	right: 0;
+	left: 0;
+	background-image: url(../../img/gamerbg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#goldshark {
+	position: absolute;
+	font-size: 0.3rem;
+	color: #FFEB00;
+	top: 1.25rem;
+	left: 4.6rem;
+	z-index: 10;
+	font-style: italic;
+}
+
+#gamer>#center {
+	position: absolute;
+	top: 1.7rem;
+	left: 1.3rem;
+	width: 7.25rem;
+	height: 4.7rem;
+	background-image: url(../../img/Index/center.jpg);
+	background-size: 100% 100%;
+	border: #007DDB 1px solid;
+	border-radius: 3%;
+}
+
+#center>#demo>img {
+	position: absolute;
+	z-index: 1;
+	height: 0.7rem;
+	width: 0.7rem;
+	bottom: 0.3rem;
+	right: 0.5rem;
+}
+
+.beginimg {
+	position: relative;
+	z-index: 98;
+	height: 1rem;
+	width: 7.2rem;
+	text-align: center;
+	top: 1.5rem;
+	left: 0rem;
+}
+
+#countDownTime {
+	font-size: 0.66rem;
+	font-style: italic;
+	font-weight: bold;
+	position: relative;
+	z-index: 99;
+	color: orange;
+	top: 0.5rem;
+	left: 4.75rem;
+}
+
+#game>img {
+	border: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#CjImgList {
+	margin: 0;
+	margin-top: 0;
+	position: relative;
+	background: #8e1115;
+	top: 0.62rem;
+	left: 0.25rem;
+}
+
+#CjImgList ul li {
+	width: 1.05rem;
+	height: 1rem;
+	overflow: hidden;
+	position: absolute;
+	background: no-repeat;
+	/*外围图片*/
+	margin: 0;
+	padding-left: 0;
+	top: 0;
+	bottom: 0;
+	background-position: center center;
+}
+
+#CjImgList ul li.onfocus span {
+	width: 1rem;
+	/*红光的大小*/
+	height: 1rem;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url(../../img/Index/bng1.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.animation {
+	animation: heart 6s ease;
+	border-radius: 10px;
+	border-width: 3px;
+}
+
+@keyframes heart {
+	0% {
+		box-shadow: 0px 0px 8px 3px gold inset;
+	}
+	20% {
+		box-shadow: none;
+	}
+	40% {
+		box-shadow: 0px 0px 8px 3px gold inset;
+	}
+	60% {
+		box-shadow: none;
+	}
+	80% {
+		box-shadow: 0px 0px 8px 3px gold inset;
+	}
+	100% {
+		box-shadow: none;
+	}
+}
+
+
+/*下注类型区 结果*/
+
+#bet {
+	position: relative;
+	top: 1.02rem;
+	height: 3.75rem;
+	right: 0;
+	left: 0;
+	background-image: url(../../img/betbg.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindOne>#Kind1-1 {
+	position: relative;
+	height: 1.1rem;
+	width: 2.95rem;
+	float: left;
+	left: 0.1rem;
+	top: 0.2rem;
+	margin-left: 0.25rem;
+	background-image: url(../../img/feiqin.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindOne>#Kind1-1>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.41rem;
+	top: 0.39rem;
+	left: 1.9rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindOne>#Kind1-2 {
+	position: relative;
+	height: 1.1rem;
+	width: 2.95rem;
+	float: left;
+	left: 0rem;
+	top: 0.2rem;
+	margin-left: 0.35rem;
+	background-image: url(../../img/shark.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindOne>#Kind1-2>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.41rem;
+	top: 0.39rem;
+	left: 2.07rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindOne>#Kind1-3 {
+	position: relative;
+	height: 1.1rem;
+	width: 2.95rem;
+	float: left;
+	top: 0.2rem;
+	margin-left: 0.25rem;
+	background-image: url(../../img/zoushou.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindOne>#Kind1-3>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.41rem;
+	top: 0.39rem;
+	left: 1.95rem;
+	color: #255BA1;
+	font-style: italic;
+}
+
+#bet>#KindTwo>#Kind2-1 {
+	position: relative;
+	top: 0.25rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/gezi.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindTwo>#Kind2-1>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindTwo>#Kind2-2 {
+	position: relative;
+	top: 0.25rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/kongque.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindTwo>#Kind2-2>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindTwo>#Kind2-3 {
+	position: relative;
+	top: 0.25rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/panda.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindTwo>#Kind2-3>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #255BA1;
+	font-style: italic;
+}
+
+#bet>#KindTwo>#Kind2-4 {
+	position: relative;
+	top: 0.25rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/houzi.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindTwo>#Kind2-4>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #255BA1;
+	font-style: italic;
+}
+
+#bet>#KindThr>#Kind3-1 {
+	position: relative;
+	top: 0.3rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/yanzi.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindThr>#Kind3-1>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindThr>#Kind3-2 {
+	position: relative;
+	top: 0.3rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.13rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/laoying.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindThr>#Kind3-2>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #6A3870;
+	font-style: italic;
+}
+
+#bet>#KindThr>#Kind3-3 {
+	position: relative;
+	top: 0.26rem;
+	height: 1.13rem;
+	width: 2.31rem;
+	float: left;
+	left: 0.08rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/laohu.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindThr>#Kind3-3>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.3rem;
+	color: #255BA1;
+	font-style: italic;
+}
+
+#bet>#KindThr>#Kind3-4 {
+	position: relative;
+	top: 0.3rem;
+	height: 1.05rem;
+	width: 2.2rem;
+	float: left;
+	left: 0.05rem;
+	margin-left: 0.2rem;
+	background-image: url(../../img/tuzi.png);
+	background-size: 100% 100%;
+}
+
+#bet>#KindThr>#Kind3-4>span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 0.38rem;
+	top: 0.35rem;
+	left: 1.2rem;
+	color: #255BA1;
+	font-style: italic;
+}
+
+
+/*帮助 声音 走势 撤销区*/
+
+#help {
+	position: relative;
+	top: 1.05rem;
+}
+
+
+/*按钮选中状态*/
+
+.helpseleted {
+	background-image: url(../../img/helpseleted.png);
+	background-size: 108% 108%;
+	background-position: left -0.01rem top 0;
+}
+
+#help>#helpbtn>img {
+	position: absolute;
+	left: 0.35rem;
+	height: 0.6rem;
+	width: 1.4rem;
+}
+
+#help>#voicebtn>img {
+	position: absolute;
+	left: 2.0rem;
+	height: 0.6rem;
+	width: 1.4rem;
+}
+
+#help>#oldbtn>img {
+	position: absolute;
+	left: 6.3rem;
+	height: 0.6rem;
+	width: 1.4rem;
+}
+
+#help>#backbtn>img {
+	position: absolute;
+	left: 8rem;
+	height: 0.6rem;
+	width: 1.4rem;
+}
+
+
+/*下注金额区*/
+
+#bet--gold {
+	position: relative;
+	top: 1.7rem;
+	height: 1.15rem;
+	right: 0;
+	left: 0;
+	background-image: url(../../img/moneybg.png);
+	background-size: 100% 100%;
+}
+
+
+/*下注金币选中状态*/
+
+.goldseleted {
+	background-image: url(../../img/goldseleted.png);
+	background-size: 100% 100%;
+}
+
+
+#bet--gold #gold5{
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 5%;
+	cursor: pointer;
+	z-index: 99;
+}
+
+#gold10{
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 19%;
+	cursor: pointer;
+	z-index: 99;
+}
+
+#gold50{
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 35%;
+	z-index: 99;
+}
+
+#gold100{
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 52%;
+	z-index: 99;
+}
+
+#gold500{
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 68%;
+	z-index: 99;
+}
+
+#gold1k {
+	position: absolute;
+	height: 0.9rem;
+	width: 0.9rem;
+	top: 0.15rem;
+	left: 85%;
+	z-index: 99;
+}
+
+
+/*主页 记录等区域*/
+
+#tab {
+	position: absolute;
+	bottom: 0rem;
+	height: 2.0rem;
+	width: 100%;
+	left: 0;
+}
+
+
+/*主页*/
+
+#tab>#hometab {
+	position: absolute;
+	bottom: 0rem;
+	left: 0.2rem;
+	max-width: 1.3rem;
+	max-height: 0.9rem;
+}
+
+
+/*投注记录*/
+
+#tab>#bettingtab {
+	position: absolute;
+	bottom: 0rem;
+	left: 20%;
+	width: 1.3rem;
+	height: 0.9rem;
+}
+
+
+/*佣金记录*/
+
+#tab>#yongtab {
+	position: absolute;
+	bottom: 0rem;
+	left: 40%;
+	width: 1.3rem;
+	height: 0.9rem;
+}
+
+
+/*代理*/
+
+#tab>#proxytab {
+	position: absolute;
+	bottom: 0rem;
+	left: 60%;
+	width: 1.3rem;
+	height: 0.9rem;
+}
+
+
+/*客服*/
+
+#tab>#servertab {
+	position: absolute;
+	bottom: 0rem;
+	left: 80%;
+	width: 1.3rem;
+	height: 0.9rem;
+}
+
+
+/*筹码*/
+
+.chip {
+	border-radius: 50%;
+	transition: all ease 1s;
+	position: fixed;
+	opacity: 1;
+	height: 0.6rem;
+	width: 0.6rem;
+}

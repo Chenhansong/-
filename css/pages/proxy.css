@@ -1,0 +1,135 @@
+/*代理背景图*/
+
+#myproxy {
+	position: relative;
+	top: 0.95rem;
+	height: 13.2rem;
+	left: 0rem;
+	right: 0rem;
+	width: 100%;
+	background-image: url(../../img/yongbg.png);
+	background-size: 100% 100%;
+}
+
+
+/*佣金说明*/
+
+#proxyinfo>img {
+	position: absolute;
+	top: 0.8rem;
+	right: 1rem;
+	width: 1.7rem;
+	height: 0.6rem;
+}
+
+
+/*邀请好友*/
+
+#jietu>img {
+	position: absolute;
+	top: 2rem;
+	width: 8rem;
+	height: 1.1rem;
+	left: 1.3rem;
+}
+
+
+/*二维码生产*/
+
+#erweima>img {
+	position: absolute;
+	top: 3.7rem;
+	width: 2.4rem;
+	height: 1.2rem;
+	left: 3.8rem;
+}
+
+#level1 {
+	position: absolute;
+	top: 6rem;
+	left: 0.7rem;
+	right: 0.7rem;
+	height: 1.1rem;
+	background-image: url(../../img/proxy/level1r.png);
+	background-size: 100% 100%;
+}
+
+#level1>span {
+	position: absolute;
+	top: 0.27rem;
+	right: 3rem;
+	color: #FF9601;
+	font-size: 0.52rem;
+}
+
+#level2 {
+	position: absolute;
+	top: 7.3rem;
+	left: 0.7rem;
+	right: 0.7rem;
+	height: 1.1rem;
+	background-image: url(../../img/proxy/level2r.png);
+	background-size: 100% 100%;
+}
+
+#level2>span {
+	position: absolute;
+	top: 0.27rem;
+	right: 3rem;
+	color: #FF9601;
+	font-size: 0.52rem;
+}
+
+#level3 {
+	position: absolute;
+	top: 8.6rem;
+	left: 0.7rem;
+	right: 0.7rem;
+	height: 1.1rem;
+	background-image: url(../../img/proxy/level3r.png);
+	background-size: 100% 100%;
+}
+
+#level3>span {
+	position: absolute;
+	top: 0.27rem;
+	right: 3rem;
+	color: #FF9601;
+	font-size: 0.52rem;
+}
+
+#level4 {
+	position: absolute;
+	top: 9.9rem;
+	left: 0.7rem;
+	right: 0.7rem;
+	height: 1.1rem;
+	background-image: url(../../img/proxy/level4r.png);
+	background-size: 100% 100%;
+}
+
+#level4>span {
+	position: absolute;
+	top: 0.27rem;
+	right: 3rem;
+	color: #FF9601;
+	font-size: 0.52rem;
+}
+
+#level5 {
+	position: absolute;
+	top: 11.2rem;
+	left: 0.7rem;
+	right: 0.7rem;
+	height: 1.1rem;
+	background-image: url(../../img/proxy/level5r.png);
+	background-size: 100% 100%;
+}
+
+#level5>span {
+	position: absolute;
+	top: 0.27rem;
+	right: 3rem;
+	color: #FF9601;
+	font-size: 0.52rem;
+}

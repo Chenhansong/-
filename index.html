@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="email=no" name="format-detection" />
+		<meta name="format-detection" content="telephone=no">
+		
+		<link rel="stylesheet" href="css/pages/game.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/layui.css" />
+		<link rel="stylesheet" href="css/layer.css" />
+		<!--<link rel="stylesheet" href="css/layui.mobile.css" />-->
+
+		<script type="text/javascript" src="js/index.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--<script type="text/javascript" src="js/mobile.js"></script>-->
+		
+		<script src="js/plays.js" type="text/javascript"></script>
+		<script src="js/tabmove.js" type="text/javascript"></script>
+		<script src="js/nomove.js" type="text/javascript" charset="utf-8"></script>
+		<title>飞禽走兽</title>
+
+	</head>
+
+	<body class="no-touch">
+		<div class="container-fluid" id="">
+			<audio src="music/残凌诺 - 凤舞九天 (Remix).mp3" id="bgmmusic" autoplay="autoplay"></audio>
+			<audio src="music/rotation1.mp3" id="rotation"></audio>
+			<!--公告信息-->
+			<div id="note">
+				<img src="img/gonggao.png" alt="" /> &nbsp;
+				<span>4月2日 12:32 亲爱的XXX祝你游戏愉快</span>
+			</div>
+
+			<!--用户信息-->
+			<div id="header">
+				<div>
+					<div id="user--head">
+						<img src="img/head.jpg" alt="" />
+					</div>
+					<div id="user--info">
+						<span id="user--id">飞禽走兽</span>
+						<img src="img/yue.png" />
+						<span id="user--money">3632万</span>
+					</div>
+				</div>
+				<div>
+					<div id="duihuan">
+						<img src="img/duihuan.png" alt="" />
+					</div>
+					<div id="chongzhi">
+						<img src="img/chongzhi.png" alt="" />
+					</div>
+				</div>
+			</div>
+			
+			<!--游戏转盘区-->
+			<div id="gamer">
+				<span id="goldshark">x100</span>
+				<div id="center">
+					<div id="demo">
+						<img src="img/others.png" id="postpic" />
+					</div>
+					<div id="countDown">
+						<img src="img/Index/countDownTime.png" class="beginimg" id="">
+						<span id="countDownTime"></span>
+						</img>
+					</div>
+				</div>
+
+				<div id="CjImgList">
+					<ul>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+						<li><span></span></li>
+					</ul>
+				</div>
+
+			</div>
+			<!--下注类型 结果区-->
+			<div id="bet">
+				<div id="KindOne">
+					<div id="Kind1-1" onclick="bett('Kind1-1')">
+						<span>x2</span>
+					</div>
+					<div id="Kind1-2" onclick="bett('Kind1-2')">
+						<span>x24</span>
+					</div>
+					<div id="Kind1-3" onclick="bett('Kind1-3')">
+						<span>x2</span>
+					</div>
+				</div>
+				<div id="KindTwo">
+					<div id="Kind2-1" onclick="bett('Kind2-1')">
+						<span>x8</span>
+					</div>
+					<div id="Kind2-2" onclick="bett('Kind2-2')">
+						<span>x8</span>
+					</div>
+					<div id="Kind2-3" onclick="bett('Kind2-3')">
+						<span>x6</span>
+					</div>
+					<div id="Kind2-4" onclick="bett('Kind2-4')">
+						<span>x8</span>
+					</div>
+				</div>
+				<div id="KindThr">
+					<div id="Kind3-1" onclick="bett('Kind3-1')">
+						<span>x6</span>
+					</div>
+					<div id="Kind3-2" onclick="bett('Kind3-2')">
+						<span>x13</span>
+					</div>
+					<div id="Kind3-3" onclick="bett('Kind3-3')">
+						<span>x12</span>
+					</div>
+					<div id="Kind3-4" onclick="bett('Kind3-4')">
+						<span>x6</span>
+					</div>
+				</div>
+			</div>
+			<!--帮助 声音 走势 撤销区-->
+			<div id="help">
+				<div id="helpbtn">
+					<img src="img/helpbtn.png" alt="" id="helping" />
+				</div>
+				<div id="voicebtn">
+					<img src="img/voiceon.png" alt="" id="voice" />
+				</div>
+				<div id="oldbtn">
+					<img src="img/oldbtn.png" alt="" id="oldbeting" />
+				</div>
+				<div id="backbtn">
+					<img src="img/backbtn.png" alt="" id="backing" />
+				</div>
+			</div>
+			<!--下注金额区-->
+			<div id="bet--gold">
+					<img src="img/gold5.png" alt="" id="gold5" />
+					<img src="img/gold10.png" alt="" id="gold10" />
+					<img src="img/gold50.png" alt="" id="gold50" />
+					<img src="img/gold100.png" alt="" id="gold100" />
+					<img src="img/gold500.png" alt="" id="gold500" />
+					<img src="img/gold1k.png" alt="" id="gold1k" />
+				<!--隐藏表单用于设置js的num值-->
+				<input type="hidden" id="golds" value="0" />
+			</div>
+			<!--主页 记录等区域-->
+			<div id="tab">
+				<img src="icons/home.png" alt="" id="hometab" />
+				<img src="icons/betting.png" alt="" id="bettingtab" />
+				<img src="icons/yong.png" alt="" id="yongtab" />
+				<img src="icons/proxy.png" alt="" id="proxytab" />
+				<img src="icons/server.png" alt="" id="servertab" />
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	function GetObj() {
+		var obj;
+		var Picnum = 0;
+		$("#postpic").show();
+		var x = rnd(1, 3);
+		var y = 1;
+		if(x == 1) {
+			y = rnd(1, 3);
+		} else {
+			y = rnd(1, 4);
+		}
+		obj = document.getElementById("Kind" + x + "-" + y);
+		CreatPic(obj, Picnum);
+
+	}
+	//随机下注
+	function sjxz(nextTime) {
+		//下注的人数
+		var maxNum = 80;
+		var time = nextTime;
+		var countNum = Math.floor(Math.random() * maxNum + 1); //每期投注人数;
+
+		var betTime = [];
+		for(var i = 0; i < countNum; i++) {
+			betTime[i] = 1 * 1000 + Math.floor(Math.random() * (time - 5) * 1000);
+		}
+		betTime = betTime.sort(function(a, b) {
+			return a - b
+		});
+		for(var j = 0; j < countNum; j++) {
+			setTimeout(GetObj, betTime[j]);
+		}
+	}
+
+	function rnd(n, m) {
+		var random = Math.floor(Math.random() * (m - n + 1) + n);
+		return random;
+	}
+
+	var num = 0;
+
+	function CreatPic(obj, creatnum) { //number 创造图片个数
+		var newhtml;
+		newhtml = '<img src="img/Index/gold' + GetRandomPicAddress() + '.png" class="chip" id="jb' + num + '" name="gold"/>';
+		$("#bet").append(newhtml);
+		MovePic(obj);
+		num++;
+	}
+
+	function GetRandomPicAddress() {
+		var numberPic = rnd(1, 6);
+		return numberPic;
+	}
+
+	function MovePic(obj) {
+		var PostPic = document.getElementById("postpic");
+		var getposition = GetPosition(obj);
+
+		$('#jb' + num).css({
+			"top": PostPic.getBoundingClientRect().top,
+			"left": PostPic.getBoundingClientRect().left
+		});
+
+		//left 最大115  top 最大40
+		$("#jb" + num).animate({
+			"left": getposition.left + GetRandomPoint().left,
+			"top": getposition.top + GetRandomPoint().top
+		}, 300);
+	}
+
+	function HiddenPic() {
+		$("#bet").children("img").remove();
+	}
+
+	function GetRandomPoint() {
+		var Number = [];
+		Number.left = parseInt(Math.random() * 52);
+		Number.top = parseInt(Math.random() * 18);
+		return Number;
+		if(Number.left >= 20 && Number.top >= 7) {
+			return Number;
+		} else {
+			Number = {
+				left: 0,
+				top: 0
+			};
+			return Number;
+		}
+	}
+	function GetPosition(obj) {
+		return obj.getBoundingClientRect();
+	}
+</script>
+
+<!--打印图片-->
+<script type="text/javascript">
+	var picadress = 0; //图片地址
+	var checkNum = 0; //特殊图片标签的li下标
+
+	function ChangePicSize(obj) { //图片自适应
+		obj.style.backgroundSize = "0.9rem 0.9rem";
+		obj.style.height = "1rem";
+		obj.style.width = "1rem";
+	}
+
+	function PrintPicture() {
+		for(var num = 1; num < 28; num += 3) {
+			picadress++;
+			for(var x = 0; x < 3; x++) {
+				checkNum = num + x;
+				if(checkNum == 5 || checkNum == 12 || checkNum == 19 || checkNum == 26) { //添加特殊图片
+					receiveli[checkNum - 1].style.backgroundImage = "url(img/Index/special" + checkNum + ".png)";
+					ChangePicSize(receiveli[checkNum - 1]);
+					num++;
+				}
+			}
+			receiveli[num].style.backgroundImage = "url(img/Index/" + picadress + ".png)";
+			receiveli[num + 1].style.backgroundImage = "url(img/Index/" + picadress + ".png)";
+			for(var cpn = num; cpn <= num + 1; cpn++) {
+				ChangePicSize(receiveli[cpn]);
+			}
+			if(num <= 25) { //防止下标溢出
+				receiveli[num + 2].style.backgroundImage = "url(img/Index/" + picadress + ".png)";
+				ChangePicSize(receiveli[num + 2]);
+			}
+
+		}
+		receiveli[0].style.backgroundImage = "url(img/Index/" + picadress + ".png)";
+		ChangePicSize(receiveli[0]);
+	}
+	var leftpx = 1.05,
+		downpx = 1;
+	var receiveli = document.getElementsByTagName("li"); //接受li元素
+	var num = 0,
+		numtwo = 0;
+	for(; num < 9; num++) { //上
+		receiveli[num].style.left = leftpx * (num) + "rem";
+		receiveli[num].style.top = "0rem";
+	}
+
+	numtwo = num;
+	for(; num < 6 + numtwo; num++) { //右
+		receiveli[num].style.top = downpx * (num - numtwo + 1) + "rem";
+		receiveli[num].style.right = "0.6rem";
+	}
+
+	numtwo = num;
+	for(; num < 8 + numtwo; num++) { //下
+		receiveli[num].style.left = leftpx * (7 + numtwo - num) + "rem";
+		receiveli[num].style.top = "6rem";
+	}
+
+	numtwo = num;
+	for(; num < 5 + numtwo; num++) { //左
+		receiveli[num].style.top = downpx * (5 + numtwo - num) + "rem";
+		receiveli[num].style.left = "0rem";
+	}
+	PrintPicture();
+</script>
+
+<script type="text/javascript">
+	var RememberState = {
+		lostIndex: 0,
+		StartBool: true
+	}; //上一次停止转动的位置    是否第一次进入界面
+</script>
+
+<script type="text/javascript">
+	function setCj(theMaxDiv) {
+		this.AllLi = $("#" + theMaxDiv + " ul li"); // 获取li节点
+		this.index = 0; // 当前位置		
+		this.prveIndex = 0; // 前一位置
+		this.theQuick = 0; // 加速位置
+		this.Speed = 300; // 默认速度
+		this.JSpeed = 0; // 在哪一格变慢
+		this.theQuan = 0; // 转动圈数
+		this.JtheQuan = 0; // 计算圈数
+		this.theNum = 0; // 转动取值
+		this.flag = false; // 结束标示	
+		this.theTime = null; // 自动执行
+	}
+
+	// 初始化方法
+	// 初始化值
+	setCj.prototype.Init = function() {
+		theObj = this;
+		this.theQuan = this.GetRandomNum(4, 6); // 随机取得圈数(3-6)
+		this.theNum = ChangePercent(1, this); // 转动得到得值(1-28)  参数1表示上行 2表示右行。。。。
+		this.flag = false; // 结束表示
+		this.JtheQuan = 1; // 开始转动	
+		this.JSpeed = this.theNum - 10; // 在哪一格变慢
+		if(this.JSpeed <= 0) {
+			this.JSpeed += 27; //防止得到负数永远慢不下来
+		}
+
+		this.theTime = setInterval(function() {
+			theObj.Play()
+		}, this.Speed); // 自动执行
+	}
+
+	// 动作执行
+	setCj.prototype.Play = function() {
+		var ListId = []; //收集bei 层里被选中框的ID
+		if(this.flag == false) { // 是否未结束
+			// 加速判断
+			if(parseInt(this.theQuick, 10) == 5) {
+				clearInterval(this.theTime);
+				this.Speed = 50; // 加速
+				this.theTime = setInterval(function() {
+					theObj.Play()
+				}, this.Speed); // 自动执行
+			}
+
+			//跑N圈减速
+			if(this.theQuan == this.JtheQuan + 1 && this.index == this.JSpeed) {
+				clearInterval(this.theTime);
+				this.Speed = 300;
+				this.flag = true; //触发结束
+				this.theTime = setInterval(function() {
+					theObj.Play()
+				}, this.Speed); // 自动执行
+			}
+		}
+		
+		// 判断一圈是否结束
+		var lost=0,getin=true;//getin第一次进入
+		if(this.index >= this.AllLi.length) {
+			this.index = 0;			
+			if(RememberState.lostIndex>0){
+				lost=this.index-RememberState.lostIndex;
+			if((lost<14)&&(this.JtheQuan==1)&&getin){//当上一句最后的位置大于14时并新一局不是第一圈时 并且也是第一次进入这个if
+				this.theQuan++;
+				getin=false;
+			}	
+			
+			}
+			this.JtheQuan++; // 圈数累加
+		}
+
+		//结束转动并选中
+		if(this.flag == true && parseInt(this.index, 10) == parseInt(this.theNum, 10) - 1) {
+			this.theQuick = 0;
+			clearInterval(this.theTime);
+			PicLights(this.index); //图片边缘闪烁效果
+
+			RememberState.lostIndex = this.index;
+			setTimeout("$('.animation').removeClass('animation'); RememberState.StartBool=true; HiddenPic();Start();document.getElementById('rotation').pause();document.getElementById('bgmmusic').currentTime=0;document.getElementById('bgmmusic').play();", 1000 * 5);
+		}
+
+		function PicLights(index) {
+			//KindOne区域效果
+			if((index >= 0 && index <= 3) || (index >= 19 && index <= 27 && index != 26)) {
+				document.getElementById("Kind1-1").className = "animation";
+			} else if(index == 4 || index == 18) {
+				document.getElementById("Kind1-2").className = "animation";
+			} else if(index !== 11 && index != 25) {
+				document.getElementById("Kind1-3").className = "animation";
+			}
+
+			//KindTwo and KindThree区域效果
+			if(index >= 1 && index <= 3) {
+				document.getElementById("Kind3-1").className = "animation";
+
+			} else if(index >= 5 && index <= 7) {
+				document.getElementById("Kind3-4").className = "animation";
+			} else if(index >= 8 && index <= 10) {
+				document.getElementById("Kind2-4").className = "animation";
+			} else if(index >= 12 && index <= 14) {
+				document.getElementById("Kind2-3").className = "animation";
+			} else if(index >= 15 && index <= 17) {
+				document.getElementById("Kind3-3").className = "animation";
+			} else if(index >= 19 && index <= 21) {
+				document.getElementById("Kind3-2").className = "animation";
+			} else if(index >= 22 && index <= 24) {
+				document.getElementById("Kind2-2").className = "animation";
+			} else if(index >= 26 || index == 0) {
+				document.getElementById("Kind2-1").className = "animation";
+			}
+
+		}
+
+		if(RememberState.StartBool) {
+			this.index = RememberState.lostIndex;
+			RememberState.StartBool = false;
+		}
+
+		this.AllLi.eq(this.index).addClass("onfocus"); // 当前位置	
+		// 获取前一位置用于清除焦点onfocus
+		if(this.index > 0) {
+			this.prveIndex = this.index - 1;
+		} else {
+			this.prveIndex = this.AllLi.length - 1;
+		}
+		this.AllLi.eq(this.prveIndex).removeClass("onfocus");
+
+		this.index++;
+		this.theQuick++;
+
+	}
+
+	//改变选中概率
+	var Remember = 0;
+
+	function ChangePercent(number, obj) {
+		Remember++;
+
+		if(Remember % 2 == 0 && number != null) {
+			switch(number) {
+				case 1:
+					return obj.GetRandomNum(1, 10);
+					break;
+				case 2:
+					return obj.GetRandomNum(10, 16);
+					break;
+				case 3:
+					return obj.GetRandomNum(16, 24);
+					break;
+				case 4:
+					return obj.GetRandomNum(24, 28);
+					break;
+				default:
+					break;
+			}
+		}
+		return obj.GetRandomNum(1, 28);
+	}
+
+	// 随机数生成
+	setCj.prototype.GetRandomNum = function(Min, Max) {
+		var Number;
+		while(true) {
+			Number = parseInt(Math.random() * 30);
+			if(Number >= Min && Number <= Max) {
+				return Number;
+			}
+		}
+	}
+</script>
+
+<script type="text/javascript">
+	var theCjObj = null;
+
+	function Start() {
+		var nextTime = 10;
+		HiddenPic();
+		sjxz(nextTime);
+
+		var countDownTime = nextTime; //倒计时时间
+		function countDown(countDownTime) {
+			$('#countDown').show(); //第二局时重新显示
+			var timer = setInterval(function() {
+				if(countDownTime >= 0) {
+					$("#countDownTime").text(countDownTime);
+					countDownTime--;
+				} else {
+					clearInterval(timer);
+					$('#countDown').hide();
+					$("#countDownTime").text("");
+				}
+			}, 1000);
+		}
+		countDown(countDownTime);
+
+		var settimeoutone, settimeouttwo;
+		var setinterid = setInterval(function() {
+			clearTimeout(settimeoutone);
+			settimeout = setTimeout(function() {
+				$('#postpic').show();
+			}, 1);
+		}, 1000);
+
+		settimeouttwo = setTimeout(function() {
+			clearInterval(setinterid);
+			$("#postpic").show();
+			theCjObj = (new setCj('CjImgList').Init());
+			clearTimeout(settimeouttwo);
+			
+			document.getElementById('bgmmusic').pause();
+			document.getElementById('rotation').currentTime = 0;
+			document.getElementById('rotation').play();
+		}, nextTime * 1000);
+	}
+	$(function() {
+		Start();
+	});
+</script>
